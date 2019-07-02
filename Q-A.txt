@@ -1,0 +1,29 @@
+Questions
+1. What is responsible for defining the routes of the games resource?
+-> create_router.js on the server side.
+
+2. What do you notice about the folder structure? Whats the client responsible for? Whats the server responsible for?
+-> It is split into two main sections - one for client and one for server. The client side handles the interface to the user and passing / receiving required data to / from the server. The server manages the routes and handles comms with the backend datastore.
+
+3. What are the the responsibilities of server.js?
+-> server.js:
+--- sets up the connection to the database
+--- sets up the base URL
+--- sets up the listener for client requests
+
+4. What are the responsibilities of the gamesRouter?
+-> It handles the routing for the games resource
+
+5. What process does the the client (front-end) use to communicate with the server?
+-> http get, post, update, delete requests
+
+6. What optional second argument does the fetch method take? And what is it used for in this application? Hint: See Using Fetch on the MDN docs
+-> The optional second argument allows you to pass in init options. In this application we are setting up the message for the POST operation.
+
+7. Which of the games API routes does the front-end application consume (i.e. make requests to)?
+-> fetch /
+-> post /
+-> delete /:id
+
+8. What are we using the MongoDB Driver for?
+-> This allows the server to communicate with the database
